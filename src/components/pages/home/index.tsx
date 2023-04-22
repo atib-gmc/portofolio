@@ -4,6 +4,10 @@ import { FaReact } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { DiCss3, DiHtml5 } from "react-icons/di";
 import {
+  SiRust,
+  SiExpress,
+  SiPhp,
+  SiPrisma,
   SiFigma,
   SiTailwindcss,
   SiRedux,
@@ -51,49 +55,23 @@ const Home = () => {
       icon: <SiNextdotjs />,
     },
     {
-      title: "nodeJs",
-      icon: <SiNodedotjs />,
+      title: "Rust",
+      icon: <SiRust />,
     },
     {
       title: "python",
       icon: <SiPython />,
     },
     {
-      title: "mySql",
-      icon: <SiMysql />,
-    },
-    {
-      title: "Django",
-      icon: <SiDjango />,
-    },
-    {
       title: "mongoDb",
       icon: <SiMongodb />,
     },
+    {
+      title: "Php",
+      icon: <SiPhp />,
+    },
   ];
 
-  // const codeVariants: MotionProps = {
-  //   initial: {
-  //     opacity: 0,
-  //     rotate: 360,
-  //   },
-  //   animate: {
-  //     opacity: 1,
-  //     rotate: 0,
-  //     transition: {
-  //       type: "spring",
-  //       duration: 1,
-  //     },
-  //   },
-  //   whileHover: {
-  //     scale: 1.2,
-  //     transition: {
-  //       type: "spring",
-  //       duration: 0.3,
-  //       stiffness: 5,
-  //     },
-  //   },
-  // };
   const codingIcons = [
     {
       title: "javascript",
@@ -126,6 +104,22 @@ const Home = () => {
     {
       title: "firebase",
       icon: <SiFirebase />,
+    },
+    {
+      title: "nodeJs",
+      icon: <SiNodedotjs />,
+    },
+    {
+      title: "ExpressJs",
+      icon: <SiExpress />,
+    },
+    {
+      title: "mySql",
+      icon: <SiMysql />,
+    },
+    {
+      title: "Prisma(orm)",
+      icon: <SiPrisma />,
     },
     {
       title: "figma",
@@ -220,15 +214,20 @@ const Home = () => {
             About Me
           </motion.h1>
           <motion.div className="languages mt-6 flex origin-left flex-wrap justify-around gap-10 p-8">
-            <motion.p className="leading-8 text-center md:text-start">
-              Saya adalah seorang self-taught software developer yang tinggal di
-              lebak banten. Saya telah belajar sendiri berbagai bahasa dan
-              teknologi pemrograman melalui internet dan komunitas online.
-              hampir setiap hari saya selalu menyempatkan waktu untuk belajar
-              dan bereksperiment untuk mengasah keahlian saya. Meskipun
-              otodidak, saya berdedikasi untuk tetap up-to-date dengan
-              perkembangan terbaru di lapangan, dan selalu mencari cara untuk
-              meningkatkan keterampilan dan pengetahuan saya.
+            <motion.p className="text-center leading-8 ">
+              Portofolio saya mewakili perjalanan saya sebagai selft-taught
+              programmer yang berfokus di bidang front-end. Saya bersemangat
+              untuk menciptakan aplikasi web yang menarik secara visual dan
+              intuitif sehingga memberikan pengalaman pengguna yang mulus.
+              walaupun saya berfokus di bidang frontend tetapi saya memiliki
+              cukup pengetahuan di bidang backend seperti pemnbuatan rest api,
+              manajemen database dan authentikasi menggunakan node/expressJs dan
+              saya juga menerapkan metode mvc di aplikasi fullstack saya.
+              <br />
+              <br />
+              saya harap dengan kemampuan yang saya miliki saya bisa bekerja di
+              perushaan anda dana saya akan selelu up to date dan beradaptasi
+              dengan perubahan teknologi di masa depan
             </motion.p>
           </motion.div>
         </section>
@@ -240,7 +239,7 @@ const Home = () => {
           transition={{ duration: 1.5, delay: 0.7 }}
           className="title relative text-center text-3xl font-semibold"
         >
-          My Skills
+          Bahasa yang saya kuasai
         </motion.h1>
         <section className="skills mt-14 md:flex [&>*]:flex-1">
           <motion.div

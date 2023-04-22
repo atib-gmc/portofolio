@@ -1,6 +1,7 @@
 import "./style.css";
 import email from "../../../assets/svgs/email.json";
 import React, { FormEvent } from "react";
+import toast from "react-hot-toast";
 // import Map, { NavigationControl, Marker } from "react-map-gl";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
@@ -14,16 +15,20 @@ const Contacts = () => {
   const sendEmail = async (e) => {
     setLoading("sending...");
     e.preventDefault();
-    await emailjs
-      .sendForm(
-        "service_19q4vqr",
-        "template_v1mvr8n",
-        form.current!,
-        "HBicHPOmP-CpZ7C1H"
-      )
+    const response = emailjs.sendForm(
+      "service_19q4vqr",
+      "template_v1mvr8n",
+      form.current!,
+      "HBicHPOmP-CpZ7C1H"
+    );
+    await toast
+      .promise(response, {
+        loading: "sending...",
+        error: () => `something went wrong`,
+        success: () => `sending success`,
+      })
       .then(
         (result) => {
-          alert("pesan telah di kirim");
           setLoading("success");
           //@ts-ignore
           form.current?.reset();

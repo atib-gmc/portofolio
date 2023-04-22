@@ -1,7 +1,13 @@
 import React from "react";
 import { motion, useInView } from "framer-motion";
 //@ts-ignore
+import tokopaedi from "../../../assets/tokopaedi.png";
+//@ts-ignore
 import ecommerce from "../../../assets/ecommerce.png";
+//@ts-ignore
+import social from "../../../assets/socialmedia.png";
+//@ts-ignore
+import blog from "../../../assets/blogs.png";
 //@ts-ignore
 import todo from "../../../assets/todoApp.png";
 //@ts-ignore
@@ -26,6 +32,180 @@ const Project = () => {
           Project that i created
         </motion.h1>
         <motion.div className="  mx-auto mt-14 grid place-items-center space-y-10 md:p-14">
+          <motion.div
+            initial={{ translateX: "-100vh", opacity: 0 }}
+            animate={{
+              translateX: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              stiffness: 120,
+              type: "spring",
+            }}
+          >
+            <h1 className=" my-2 text-center text-xl">
+              tokopedia clone(ui slicing)
+            </h1>
+
+            <div className="card-project group relative h-[200px] w-[300px] cursor-pointer overflow-hidden rounded-xl bg-gray-400 text-white shadow-lg transition-all duration-300 md:h-[300px] md:w-[500px] ">
+              <img
+                src={tokopaedi}
+                alt="social"
+                className="h-full w-full  object-cover"
+              />
+
+              <div className="desc opacity:0 absolute  top-[500px] h-full w-full overflow-y-scroll bg-green-500/90 p-5  pb-8 transition-all   duration-300  group-hover:top-0 group-hover:opacity-100 md:overflow-y-hidden ">
+                <a
+                  href="https://tokopedia-ui-clone.netlify.app"
+                  className="block h-full"
+                  target="_blank"
+                >
+                  <h2 className=" text-xl capitalize text-slate-800">
+                    tokopedia clone
+                  </h2>
+                  <p className="text-base text-slate-200">
+                    project ini berupa ui clone yg saya slicing dari salah satu
+                    ecommerce terbesar di indonesia yaitu tokopedia
+                  </p>
+                  <div className="desc opacity:0 mt-4 flex justify-between text-sm text-slate-200 transition-all group-hover:opacity-100"></div>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ translateX: "-100vh", opacity: 0 }}
+            animate={{
+              translateX: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              stiffness: 120,
+              type: "spring",
+            }}
+          >
+            <h1 className=" my-2 text-center text-xl">
+              full-stack blogs app (crud) with express + jwt auth and mysql
+            </h1>
+
+            <div className="card-project group relative h-[200px] w-[300px] cursor-pointer overflow-hidden rounded-xl bg-gray-400 text-white shadow-lg transition-all duration-300 md:h-[300px] md:w-[500px] ">
+              <img
+                src={blog}
+                alt="social"
+                className="h-full w-full  object-cover"
+              />
+
+              <div className="desc opacity:0 absolute  top-[500px] h-full w-full overflow-y-hidden overflow-y-scroll bg-indigo-500/80  p-5 pb-8   transition-all  duration-300 group-hover:top-0 group-hover:opacity-100 ">
+                <a
+                  href="https://github.com/adios35/fullStackBlogProject"
+                  className="block h-full"
+                  target="_blank"
+                >
+                  <h2 className=" text-xl capitalize text-slate-800">
+                    Blogs app
+                  </h2>
+                  <p className="text-base text-slate-200">
+                    fullstack blog app with node/express dan mysql sbg datbase
+                    dan jwt auth dan cloudinary sebagai image hosting
+                  </p>
+                  <br />
+                  <p className="text-base text-slate-200">
+                    <strong>catatan </strong>: dikarenakan saya tidak bisa
+                    menemukan layanan/website database hosting secara gratis
+                    seperti heroku ,website ini tidak bisa saya publish online,
+                    namun saya jamin aplikasi berjalan lancar tanpa bug, dan
+                    anda bisa mengakses source codenya di repository github saya
+                    silahkan kilk project ini
+                  </p>
+                  <div className="desc opacity:0 mt-4 flex justify-between text-sm text-slate-200 transition-all group-hover:opacity-100">
+                    <div className="col">
+                      <h4 className="">fitur:</h4>
+                      <ul className="list-disc pl-4  ">
+                        <li>register/login</li>
+                        <li>posting article</li>
+                        <li>edit article</li>
+                        <li>delete article</li>
+                        <li>jwt auth berbasis token</li>
+                      </ul>
+                    </div>
+                    <div className="col">
+                      <h4 className="">bahasa/framework yang di gunakan:</h4>
+                      <ul className="list-disc pl-4  ">
+                        <li>vite/typescript</li>
+                        <li>node/express</li>
+                        <li>mysql(database)</li>
+                        <li>prisma(orm)</li>
+                        <li>tailwindcss</li>
+                        <li>cloudinary</li>
+                        <li>jwt</li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ translateX: "-100vh", opacity: 0 }}
+            animate={{
+              translateX: 0,
+              opacity: 1,
+            }}
+            transition={{
+              duration: 0.3,
+              stiffness: 120,
+              type: "spring",
+            }}
+          >
+            <h1 className=" my-2 text-center text-xl">
+              Full-stack social media App
+            </h1>
+
+            <div className="card-project group relative h-[200px] w-[300px] cursor-pointer overflow-hidden rounded-xl bg-gray-400 text-white shadow-lg transition-all duration-300 md:h-[300px] md:w-[500px] ">
+              <img
+                src={social}
+                alt="social"
+                className="h-full w-full  object-cover"
+              />
+
+              <div className="desc opacity:0 absolute  top-[500px] h-full w-full overflow-y-scroll bg-indigo-500/80 p-5  pb-8 transition-all   duration-300  group-hover:top-0 group-hover:opacity-100 md:overflow-y-hidden ">
+                <a
+                  href="https://social-media-app-firebase.netlify.app"
+                  className="block h-full"
+                  target="_blank"
+                >
+                  <h2 className=" text-xl capitalize text-slate-800">
+                    social-media app
+                  </h2>
+                  <p className="text-base text-slate-200">
+                    fullstack social media app dengan firebase sebagai backend
+                  </p>
+                  <div className="desc opacity:0 mt-4 flex justify-between text-sm text-slate-200 transition-all group-hover:opacity-100">
+                    <div className="col">
+                      <h4 className="">fitur:</h4>
+                      <ul className="list-disc pl-4  ">
+                        <li>register/login</li>
+                        <li>posting status + image</li>
+                        <li>bisa comment</li>
+                        <li>bissa follow/unFollow</li>
+                        <li>Like status</li>
+                      </ul>
+                    </div>
+                    <div className="col">
+                      <h4 className="">bahasa/framework yang di gunakan:</h4>
+                      <ul className="list-disc pl-4  ">
+                        <li>vite/typescript</li>
+                        <li>firebase</li>
+                        <li>tailwindcss</li>
+                        <li>redux</li>
+                      </ul>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </motion.div>
           <motion.div
             initial={{ translateX: "-100vh", opacity: 0 }}
             animate={{
